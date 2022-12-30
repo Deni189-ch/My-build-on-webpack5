@@ -1,0 +1,18 @@
+$primaryColor: darkcyan;
+$secondaryColor: darkslategray;
+
+h1 {
+  color: $primaryColor;
+  font-family: 'Roboto';
+}
+
+.conteiner{
+  &__subtitle {
+    font-family: 'Roboto';
+    color: $secondaryColor;
+    display: block;
+    height: 140px;
+    background-image: url("../images/download.png");
+    background-position: center ;
+  }
+}
