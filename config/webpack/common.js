@@ -20,7 +20,8 @@ module.exports = {
   output: {
     path: paths.build,
     filename: 'js/[name].[hash].bundle.js',
-    // publicPath: '/',
+    assetModuleFilename: 'images/[hash][ext][query]',
+    publicPath: '/',
     clean: true,
     // crossOriginLoading: 'anonymous',
     // module: true,
@@ -40,7 +41,6 @@ module.exports = {
         test: /\.(js|jsx|ts|tsx)$/i,
         exclude: /node_modules/,
         use: [babelLoader]
-        // use: [babelLoader, 'ts-loader']
       },
       // MD
       {
@@ -60,7 +60,7 @@ module.exports = {
       },
       // static files
       {
-        test: /\.(png|jpg|gif|svg|eot|ttf|woff)$/,
+        test: /\.(eot|ttf|woff|woff2)$/,
         type: 'asset/resource'
       },
     ]
@@ -101,9 +101,10 @@ module.exports = {
     // })
   ],
   resolve: {
-    // alias: {
-    //   '@': `${paths.src}/modules`
-    // },
+    alias: {
+      '@components': `${paths.src}/components`,
+      '@images': `${paths.src}/assets/images`
+    },
     extensions: ['.mjs', '.js', '.jsx', '.ts', '.tsx', '.json']
   }
 };
