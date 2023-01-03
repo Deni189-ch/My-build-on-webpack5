@@ -11,6 +11,7 @@ import LapTopJpg from '@images/lap-top.jpg'
 import CotGif from '@images/200w.gif'
 
 export const App = () => {
+  console.log('process.env', process.env.SECRET_KEY)
   return (
     <div className='app'>
       <h1>

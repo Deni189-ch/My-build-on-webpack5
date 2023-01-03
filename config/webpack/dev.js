@@ -1,9 +1,9 @@
-const paths = require('../paths')
+const webpack = require('webpack')
 
-// const webpack = require('webpack')
+const paths = require('../paths/paths.js')
 const { merge } = require('webpack-merge')
 
-const common = require('./common')
+const common = require('./common/index')
 
 const cssLoader = [
   {
@@ -21,30 +21,29 @@ const cssLoader = [
       },
     },
   },
+  {
+    loader: 'sass-loader'
+  },
 ]
 
 module.exports = merge(common, {
   mode: 'development',
-  // devtool: 'eval-cheap-source-map', что делает??
+  devtool: 'eval-cheap-source-map',
   module: {
     rules: [
-      // CSS,
       {
-        // test: /\.(c|sa|sc)ss$/i,
-        test: /\.css$/i,
+        test: /\.(c|sa|sc)ss$/i,
         use: cssLoader,
-        sideEffects: true // что бы три шейкинг не выкинул глобальные стили
+       // sideEffects: true //  ?
       },
     ]
   },
   devServer: {
     compress: true,
-    static: paths.build, // где создадим сборку
-    // historyApiFallback: true,
-    hot: true, // перезагрузка стр при внесении изменений в код (авто)?
-    // open: true,
+    static: paths.build,
+    historyApiFallback: true,
+    hot: true,
     port: 3000,
-    // clientLogLevel: 'silent'
   },
-  // plugins: [new webpack.HotModuleReplacementPlugin()]
+  plugins: [new webpack.HotModuleReplacementPlugin()]
 })

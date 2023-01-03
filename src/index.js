@@ -11,4 +11,4 @@ root.render(
   </React.StrictMode>
 );
 
-// reportWebVitals(); узнать что делает / pva ?
+// reportWebVitals(); / pva ?
