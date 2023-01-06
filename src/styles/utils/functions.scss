@@ -1,0 +1,29 @@
+// =======
+// Функции
+// =======
+
+@mixin hover() {
+  &:hover {
+    @content;
+  }
+
+  &:active {
+    @content;
+  }
+}
+@function z-index($key) {
+
+  @return map-get($z-index, $key);
+}
+
+// =======
+// Миксин
+// =======
+
+/*
+  Миксин для организации z-index
+*/
+
+@mixin z-index($key) {
+  z-index: z-index($key);
+}

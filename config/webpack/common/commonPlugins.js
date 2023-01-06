@@ -1,10 +1,10 @@
-const webpack = require("webpack");
+const webpack = require("webpack")
 
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyWebpackPlugin = require("copy-webpack-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 
-const paths = require("../../paths/paths");
-const Dotenv = require("dotenv-webpack");
+const paths = require("../../paths/paths")
+const Dotenv = require("dotenv-webpack")
 
 module.exports = {
   plugins: [
@@ -30,6 +30,6 @@ module.exports = {
 
     new Dotenv({
       path: paths.env,
-    })
+    }),
   ]
 }

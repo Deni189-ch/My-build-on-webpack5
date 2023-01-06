@@ -1,0 +1,34 @@
+// =====
+// Цвета
+// =====
+
+/* Основные цвета */
+
+$white: #ffffff; //
+
+$cyan-200: #31a5b3;
+$cyan-300: #008b99;
+
+$orange-200: #fc9546;
+$orange-300: #f5822a;
+
+/* Дополнительные цвета */
+
+$gray-200: #9b9fa1;
+$gray-400: #575b5c;
+$gray-500: #2d2d2d;
+$gray-600: #202020;
+
+$light-gray-100: #f7f8f9;
+$light-gray-500: #eaeeef;
+
+
+$z-index: (
+        negative: -1,
+        none: 0,
+        default: 1,
+        positive: 5,
+        tooltip: 100,
+        modal: 200,
+        progressbar: 1000,
+);

@@ -1,0 +1,114 @@
+@import '../../../styles/common';
+
+.button {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  border-radius: 3px;
+
+  @include z-index(default);
+
+  &:disabled {
+    pointer-events: none;
+    background-color: $gray-200;
+    color: $light-gray-500;
+  }
+}
+
+// Sizes
+
+.smallerButton {
+  min-height: 35px;
+  padding: 11px 18px;
+  font-size: 12px;
+  line-height: 100.3%;
+}
+
+.smallButton {
+  min-height: 40px;
+  padding: 11px 20px;
+  font-size: 14px;
+  line-height: 17px;
+}
+
+.mediumButton {
+  min-height: 50px;
+  padding: 13px 25px 16px;
+  font-size: 16px;
+  line-height: 20px;
+}
+
+.largeButton {
+  min-height: 60px;
+  padding: 17px 30px;
+  font-size: 20px;
+  line-height: 25px;
+}
+
+// Variants
+
+.defaultButton {
+  background-color: $orange-300;
+  color: $white;
+
+  @include hover() {
+    background-color: $orange-200;
+  }
+}
+
+.alternativeButton {
+  border: 1px solid $light-gray-500;
+  background-color: $white;
+  color: $gray-500;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.05);
+
+  @include hover() {
+    background-color: $light-gray-100;
+  }
+
+  &.smallButton {
+    font-weight: 700;
+  }
+
+  &.mediumButton {
+    padding: 14px 24px;
+  }
+}
+
+//кнопка, выглядит как сылка (текст) подчеркнутая, голубая
+.LinkCyanBoldButton {
+  color: $cyan-300;
+  text-decoration: underline;
+  padding: 0px;
+  min-height: fit-content;
+
+  &:hover {
+    color: $cyan-200;
+  }
+}
+
+//кнопка, выглядит как сылка (текст) подчеркнутая, голубая
+.LinkTextUnderlineButton {
+  color: $gray-500;
+  text-decoration: underline;
+  padding: 0px;
+  min-height: fit-content;
+  font-weight: 500;
+  &:hover {
+    color: $gray-600;
+    font-weight: 550;
+  }
+}
+
+//простой текст (костыль по проьбе бека)
+.textButton {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  color: $gray-500;
+  padding: 0px;
+  pointer-events: none;
+}
