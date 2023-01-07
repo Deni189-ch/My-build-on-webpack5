@@ -1,0 +1,12 @@
+node_modules/
+
+config/
+sourse/
+public/
+
+dist/
+build/
+
+package.json
+yarn.lock
+my.test.js
